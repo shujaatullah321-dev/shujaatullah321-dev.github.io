@@ -34,3 +34,4 @@ footer{background:#071523;color:#9fb0c1;padding:48px 0 24px}footer a{color:#cfe;
 .ba figcaption{padding:12px 16px;font-weight:600;color:var(--mut)}.ba figcaption.after{color:var(--teal)}
 @media(max-width:860px){.hero:after{background:linear-gradient(180deg,#0b1f33cc,#0b1f33e6)}.ba{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.js-story .reveal{opacity:1;transform:none;transition:none}}
+.founder-photo{width:100%;height:auto;object-fit:cover;object-position:center 30%;padding:0;display:block}
