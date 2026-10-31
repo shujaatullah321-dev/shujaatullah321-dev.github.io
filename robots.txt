@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://shujaatullah321-dev.github.io/shujaat-digital/sitemap.xml
+Sitemap: https://shujaatullah321-dev.github.io/sitemap.xml
