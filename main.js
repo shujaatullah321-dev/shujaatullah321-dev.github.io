@@ -34,3 +34,6 @@ b.addEventListener('click',()=>set(!hd.classList.contains('open')));
 document.querySelectorAll('#navList a').forEach(a=>a.addEventListener('click',()=>set(false)));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
 addEventListener('resize',()=>{if(innerWidth>1024)set(false)})})();
+
+// pause ticker when offscreen
+(function(){const q=document.querySelector('.marquee');if(q&&'IntersectionObserver'in window)new IntersectionObserver(e=>q.classList.toggle('off',!e[0].isIntersecting)).observe(q)})();
