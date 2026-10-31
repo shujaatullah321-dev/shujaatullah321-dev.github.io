@@ -27,3 +27,10 @@ const f=document.getElementById('contactForm'),msg=document.getElementById('form
 f.addEventListener('submit',async e=>{e.preventDefault();const d=new FormData(f);
 if(FORM_ENDPOINT.includes('YOUR-FORM-ID')){location.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Enquiry: '+d.get('service'))}&body=${encodeURIComponent(`Name: ${d.get('name')}\nEmail: ${d.get('email')}\n\n${d.get('message')}`)}`;return}
 try{const r=await fetch(FORM_ENDPOINT,{method:'POST',body:d,headers:{Accept:'application/json'}});msg.textContent=r.ok?'JazakAllah — message sent! We will reply soon.':'Something went wrong. Please email us directly.';if(r.ok)f.reset()}catch{msg.textContent='Network error. Please email '+CONTACT_EMAIL}});
+// Mobile menu
+(function(){const b=document.getElementById('burger'),hd=document.querySelector('header.nav');if(!b)return;
+const set=o=>{hd.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};
+b.addEventListener('click',()=>set(!hd.classList.contains('open')));
+document.querySelectorAll('#navList a').forEach(a=>a.addEventListener('click',()=>set(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
+addEventListener('resize',()=>{if(innerWidth>1024)set(false)})})();

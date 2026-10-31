@@ -2,7 +2,7 @@
 // scroll reveal
 const els=document.querySelectorAll('section h2,.card,.ba figure,.projects,.vt,.founder>*');
 if(!rm&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});els.forEach(el=>{if(!el.closest('.hero')){el.classList.add('rv');io.observe(el)}})}
-if(rm||!matchMedia('(pointer: fine)').matches)return;
+if(rm||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;
 document.documentElement.classList.add('fx-cursor');
 const dot=document.createElement('div'),ring=document.createElement('div');dot.className='cur-dot';ring.className='cur-ring';ring.innerHTML='<span>Play</span>';document.body.append(dot,ring);
 let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,raf=0;
